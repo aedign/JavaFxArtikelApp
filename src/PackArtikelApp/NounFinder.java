@@ -17,91 +17,137 @@ import java.util.*;
 public class NounFinder {
     
     protected static Scanner fileScanner;
-    public static String lineSearch;
+    public static String parsedLine;
     public static String wordToPrint;
+    public static HashMap<String, String> wordMap = new HashMap<>();
 
 
-void openFile(String fileName){
+    public static void loadHashMap(){
 
-    try {
-        fileScanner = new Scanner(new File(fileName));
-        }
+        openFile("Nouns.txt");
 
-    catch(Exception e){
-        System.out.println("File not found");
-        }
+            while (fileScanner.hasNext()) {
+                parsedLine = fileScanner.nextLine();
+                wordMap.put(findWordInLine(fileScanner.nextLine()), fileScanner.nextLine());
+            }
+        fileScanner.close();
     }
 
-        
-void readFile(String wordtoFind) {
+    public static String findWordInLine(String line){
 
-    // split tasks into another two methods and call here
-    int count = 0;
+        String comma = "";
+        int i = 0;
+
+        while(!comma.equalsIgnoreCase(",")) {
+            comma = line.substring(i, i + 1);
+            i++;
+        }
+        return line.substring(0,i-1);
+    }
+
+    static void openFile(String fileName){
+
+      try {
+         fileScanner = new Scanner(new File(fileName));
+         }
+
+     catch(Exception e){
+           System.out.println("File not found");
+           }
+     }
+    /*
+     static void readFile(String wordtoFind) {
+
+      // split tasks into another two methods and call here
+     int count = 0;
+
+        long time1 = System.currentTimeMillis();
+
             
-    try{
-		while(fileScanner.hasNext()) {
+        try{
+		    while(fileScanner.hasNext()) {
 
-		    lineSearch = fileScanner.next();
-                    
-		        if(lineSearch.endsWith(",")) {
+            parsedLine = fileScanner.next();
 
-                    if (lineSearch.substring(0, wordtoFind.length()).equalsIgnoreCase(wordtoFind)
-                            &&
-                            lineSearch.substring(0, wordtoFind.length()+1).endsWith(",")) {
+            if (parsedLine.endsWith(",")) {
 
-                     //   wordToPrint = lineSearch.replace(",", "");
+                if (parsedLine.substring(0, wordtoFind.length()).equalsIgnoreCase(wordtoFind)
+                        &&
+                        parsedLine.substring(0, wordtoFind.length() + 1).endsWith(",")) {
 
-                        wordToPrint = lineSearch.substring(0, wordtoFind.length());
+                    //   wordToPrint = lineSearch.replace(",", "");
 
-                        System.out.println(searchArticle(lineSearch) + " " + wordToPrint);
-                        return;
-                    }
+                    wordToPrint = parsedLine.substring(0, wordtoFind.length());
+
+                    System.out.println(searchArticle(parsedLine) + " " + wordToPrint);
+                    return;
                 }
-		        else{
-		            while(!lineSearch.endsWith(","))
-                        lineSearch += " " + fileScanner.next();
+            } else {
+                while (!parsedLine.endsWith(","))
+                    parsedLine += " " + fileScanner.next();
 
-		            if (lineSearch.substring(0, wordtoFind.length()).equalsIgnoreCase(wordtoFind)
-                            &&
-                            lineSearch.substring(0, wordtoFind.length()+1).endsWith(",")) {
+                if (parsedLine.substring(0, wordtoFind.length()).equalsIgnoreCase(wordtoFind)
+                        &&
+                        parsedLine.substring(0, wordtoFind.length() + 1).endsWith(",")) {
 
-		               // wordToPrint = lineSearch.replace(",", "");
+                    // wordToPrint = lineSearch.replace(",", "");
 
-                        wordToPrint = lineSearch.substring(0, wordtoFind.length());
+                    wordToPrint = parsedLine.substring(0, wordtoFind.length());
 
-                        System.out.println(searchArticle(lineSearch) + " " + wordToPrint);
-		                return;
-		            }
-                    }
-		}
-		System.out.println("Word was not found.");
+                    System.out.println(searchArticle(parsedLine) + " " + wordToPrint);
+                    return;
+                }
+            }
+        }
+		System.out.println("Word not found.");
     }
     catch(Exception e){
-        System.out.println("Exception: Error while finding the word in file.");
+        System.out.println("Exception: Word not in file or entered incorrectly.");
     }
-
     fileScanner.close();
 }
+*/
 
+    static String searchArticle(String findWordArticle){
 
-String searchArticle(String findWordArticle){
-
-    if(findWordArticle.contains(",f,"))
-        return "die";
-    else if (findWordArticle.contains(",m,"))
-        return "der";
-    else if(findWordArticle.contains(",n,"))
-        return "das";
-    else
-        return ("Invalid");
-}
+        if(findWordArticle.contains(",f,"))
+            return "die";
+        else if (findWordArticle.contains(",m,"))
+            return "der";
+        else if(findWordArticle.contains(",n,"))
+            return "das";
+        else
+            return ("Word has no article");
+    }
 
         
-public static void main(String[] args){
-            
-    NounFinder theNounFinder = new NounFinder();
-    theNounFinder.openFile("Nouns.txt");
-    theNounFinder.readFile("zelt");
+    public static void main(String[] args){
+
+        loadHashMap();
+        String unformattedInput = "1. Johannesbrief";
+
+        String formattedInput = unformattedInput.substring(0,1).toUpperCase() +
+                unformattedInput.substring(1).toLowerCase();
+
+        String upperCaseInput = unformattedInput.toUpperCase();
+
+        String lowerCaseInput = unformattedInput.toLowerCase();
+
+
+
+
+
+    if(wordMap.get(unformattedInput) != null)
+        System.out.println(wordMap.get(unformattedInput));
+
+        if(wordMap.get(formattedInput) != null)
+            System.out.println(wordMap.get(formattedInput));
+
+    if(wordMap.get(upperCaseInput) != null)
+        System.out.println(wordMap.get(upperCaseInput));
+
+    if(wordMap.get(lowerCaseInput) != null)
+        System.out.println(wordMap.get(lowerCaseInput));
 
     // "viertelscheffel" cannot be found. error in file. WHY?
 
