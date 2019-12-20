@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="updating">
-      <change afterPath="$PROJECT_DIR$/src/PackArtikelApp/refactorFile.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="HashMap replaced parsing file to find a word">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nouns.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Nouns.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/NounFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/NounFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/mainScreenFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/mainScreenFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/mainScreenFXML.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NounFinder">
+  <component name="RunManager" selected="Application.Controller">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -127,6 +125,13 @@
     </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Controller" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="PackArtikelApp.Controller" />
+      <module name="FXArtikelApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,6 +199,7 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.NounFinder" />
+      <item itemvalue="Application.Controller" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -215,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572740853415</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="HashMap replaced parsing file to find a word">
+      <created>1576724887545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576724887545</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -238,6 +251,7 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="updating" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating" />
+    <MESSAGE value="HashMap replaced parsing file to find a word" />
+    <option name="LAST_COMMIT_MESSAGE" value="HashMap replaced parsing file to find a word" />
   </component>
 </project>
