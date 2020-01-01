@@ -23,12 +23,13 @@
          <children>
             <TextField fx:id="wordTextField" layoutX="120.0" layoutY="87.0" prefHeight="27.0" prefWidth="196.0" />
             <TextField fx:id="articleTextField" layoutX="58.0" layoutY="87.0" prefHeight="27.0" prefWidth="54.0" />
-            <Button layoutX="148.0" layoutY="124.0" mnemonicParsing="false" onAction="#setGoButton" prefHeight="27.0" prefWidth="54.0" text="Go" />
+            <Button layoutX="73.0" layoutY="124.0" mnemonicParsing="false" onAction="#setGoButton" prefHeight="27.0" prefWidth="95.0" text="Go" />
             <MenuButton layoutX="104.0" layoutY="166.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Special Characters">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#writeCharacter" text="ä" />
                   <MenuItem mnemonicParsing="false" onAction="#writeCharacter" text="ö" />
                 <MenuItem mnemonicParsing="false" onAction="#writeCharacter" text="ü" />
+                  <MenuItem mnemonicParsing="false" onAction="#writeCharacter" text="ß" />
               </items>
             </MenuButton>
             <Text layoutX="96.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ArtikelApp">
@@ -36,7 +37,7 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button layoutX="62.0" layoutY="124.0" mnemonicParsing="false" onAction="#setClearButton" prefHeight="27.0" prefWidth="47.0" text="Clear" />
+            <Button layoutX="199.0" layoutY="124.0" mnemonicParsing="false" onAction="#setClearButton" prefHeight="27.0" prefWidth="95.0" text="Clear" />
          </children></Pane>
    </children>
 </GridPane>

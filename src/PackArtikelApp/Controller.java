@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -32,9 +31,10 @@ public class Controller extends Application {
 
     @FXML
     private void setGoButton(ActionEvent e){
-
-        articleTextField.setText(theNounFinder.getArticle(wordTextField.getText()));
-        formatText();
+        if(!wordTextField.getText().equalsIgnoreCase("")) {
+            articleTextField.setText(theNounFinder.getArticle(wordTextField.getText()));
+            formatText();
+        }
     };
 
     private void formatText(){
@@ -50,20 +50,26 @@ public class Controller extends Application {
     }
 
     @FXML
-    private void writeCharacter(ActionEvent e){
-
+    private void writeCharacter(ActionEvent e) {
         MenuItem mi = (MenuItem) e.getSource();
         String character = mi.getText();
 
-        if(character.equalsIgnoreCase("ä"))
-            wordTextField.setText(wordTextField.getText() + "ä");
-        else if(character.equalsIgnoreCase("ö"))
-            wordTextField.setText(wordTextField.getText() + "ö");
-        else if(character.equalsIgnoreCase("ü"))
-            wordTextField.setText(wordTextField.getText() + "ü");
+        switch (character) {
+            case "ä":
+                wordTextField.setText(wordTextField.getText() + "ä");
+                break;
+            case "ö":
+                wordTextField.setText(wordTextField.getText() + "ö");
+                break;
+            case "ü":
+                wordTextField.setText(wordTextField.getText() + "ü");
+                break;
+            case "ß":
+                wordTextField.setText(wordTextField.getText() + "ß");
+                break;
+        }
+
     }
-
-
 }
 
 
