@@ -18,7 +18,6 @@ public class NounFinder {
     
     private static Scanner fileScanner;
     private static String parsedLine;
-    public static String articleToPrint;
     private static HashMap<String, String> wordMap = new HashMap<>();
 
     private static void openFile(){
@@ -36,7 +35,9 @@ public class NounFinder {
         openFile();
         while (fileScanner.hasNext()) {
             parsedLine = fileScanner.nextLine();
-            wordMap.put(findWordInLine(parsedLine), parsedLine);
+            String key = findWordInLine(parsedLine);
+            if(wordMap.get(key) == null) // proper fix to avoid replacing a word ? EX: repeated words but without gender (Nachnamen)
+                wordMap.put(key, parsedLine);
         }
         fileScanner.close();
     }

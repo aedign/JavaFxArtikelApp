@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="HashMap replaced parsing file to find a word">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FXArtikelApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FXArtikelApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nouns.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Nouns.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/NounFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/NounFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PackArtikelApp/mainScreenFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PackArtikelApp/mainScreenFXML.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -80,6 +80,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -87,11 +88,24 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="PackArtikelApp" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/PackArtikelApp" />
       <recent name="$PROJECT_DIR$" />
@@ -235,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576860946518</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Minor fixes, including indentation inconsistencies and adding the option to insert &quot;ß&quot; to words.">
+      <created>1577906297772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577906297773</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -259,6 +280,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="updating" />
     <MESSAGE value="HashMap replaced parsing file to find a word" />
-    <option name="LAST_COMMIT_MESSAGE" value="HashMap replaced parsing file to find a word" />
+    <MESSAGE value="Minor fixes, including indentation inconsistencies and adding the option to insert &quot;ß&quot; to words." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes, including indentation inconsistencies and adding the option to insert &quot;ß&quot; to words." />
   </component>
 </project>
